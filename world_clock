@@ -1,0 +1,8 @@
+#!/bin/bash
+WORLD_CLOCK_T1=$(TZ=UTC+8 date +%R\ %A)
+WORLD_CLOCK_T2=$(TZ=UTC+6 date +%R\ %A)
+WORLD_CLOCK_T3=$(TZ=UTC-1 date +%R\ %A)
+WORLD_CLOCK_T4=$(TZ=UTC-8 date +%R\ %A)
+
+echo $'California' $WORLD_CLOCK_T1 $'\n' $'New_York' $WORLD_CLOCK_T2 $'\n' $'Berlin' $WORLD_CLOCK_T3 $'\n' $'Beijing' $WORLD_CLOCK_T4 $'\n' | column -t -c 3
+
